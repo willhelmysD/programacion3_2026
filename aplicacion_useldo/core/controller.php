@@ -9,7 +9,7 @@ class Controller {
     protected function auth(){
 
         if(!isset($_SESSION['login'])){
-            header("Location: /mvc_php/auth/login");
+            header("Location: ".BASE_URL."auth/login");
             exit();
         }
 

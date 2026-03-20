@@ -4,13 +4,13 @@ startblock('article');
 ?> 
 <h2>Login</h2>
 
-<form method="POST" action="/mvc_php/auth/validar/">
+<form method="POST" action="/mvc_php/auth/calcular/">
 
-<input type="text" name="usuario" placeholder="usuario">
+    <input type="text" name="usuario" placeholder="usuario">
 
-<input type="password" name="password" placeholder="password">
+    <input type="password" name="password" placeholder="password">
 
-<button type="submit">Ingresar</button>
+    <button type="submit">Ingresar</button>
 
 </form>
 

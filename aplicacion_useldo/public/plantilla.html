@@ -28,13 +28,13 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="index.php" class="sidebar-link">
+                    <a href="<?php echo BASE_URL?>index" class="sidebar-link">
                         <i class="lni lni-user"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="reportes.php" class="sidebar-link">
+                    <a href="<?php echo BASE_URL?>reportes" class="sidebar-link">
                         <i class="lni lni-agenda"></i>
                         <span>Resportes</span>
                     </a>
@@ -83,12 +83,7 @@
                 </div>
             </header> 
                 <!-- header -->
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
-                  <li class="breadcrumb-item"><a href="#">Parking UDI</a></li>
-                  <li class="breadcrumb-item active"><a href="#">Home</a></li>
-                </ol>
-              </nav>              
+             
             <div class="container">
             <?php startblock('article'); ?>    
 
