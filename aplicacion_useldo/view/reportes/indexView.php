@@ -4,7 +4,7 @@ startblock('article');
 ?> 
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
-    <li class="breadcrumb-item"><a href="#"><?php echo APP_NAME?></a></li>
+    <li class="breadcrumb-item"><a href="#"><?php echo APP_NAME ?></a></li>
     <li class="breadcrumb-item active"><a href="#">calcular</a></li>
 </ol>
 </nav> 
