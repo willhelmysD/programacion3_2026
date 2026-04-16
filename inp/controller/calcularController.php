@@ -49,9 +49,6 @@ class calcularController {
                         $total_precio_arena = $precio_arena * $total_arena;
                         $total = $total_precio_ladrillo + $total_precio_arena + $total_precio_cemento;
                         
-                        //$cotizacion = new Cotizacion(null,$area,date('y-m-d'),$total,$tipo,null);
-                        
-
                         require_once "view/calcular/paredView.php";
                         break;
                     case 2:
@@ -76,7 +73,26 @@ class calcularController {
     }
 
     public function guardar(){
+        $total = $_POST['total'];
+        $area = $_POST['area'];
+        $msg['msg'] = "no se guardo".$total;
+        $msg['tipo'] = "warning";
+        $msg['titulo'] = "Prueba";
+        echo json_encode($msg);
         
+        /*
+                    if($rta){
+                $msg['msg'] = "Guardado correctamente";
+                $msg['tipo'] = "success";
+            } else {
+                $msg['msg'] = "Error al guardar";
+                $msg['tipo'] = "danger";
+            }                                                          
+        }else{
+            $msg['msg'] = "Todos los campos son obligartorios";
+            $msg['tipo'] = "warning";
+        } 
+        ;*/
     }
 
 }

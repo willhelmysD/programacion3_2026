@@ -46,23 +46,35 @@ startblock('article');
 
         </table>
 
-        <button type="button" onclick="guardarDatos('<?php echo $total?>',<?php echo $area?>)"></button>
+        <button type="button" onclick="GuardarDatos('<?php echo $total?>','<?php echo $area?>')">enviar</button>
     </div>
 </div>
 <?php  endblock();?>
 <script>
+    const ruta = "<?php echo BASE_URL?>";
     function  GuardarDatos(total, area){
-        let total = total;
-        let area = area;
+        let valor_total = total;
+        let valor_area = area;
          $.ajax({
-            url: 'controller/calcular/guardar',
+            url: ruta + 'calcular/guardar',
             type: 'POST',
-            data: ['total':total, 'area':area]
-            contentType: false,
-            processData: false,
+            data: {'total':valor_total, 'area':valor_area},
             success: function(respuesta) {
                 alert('Datos enviados: ' + respuesta);
+                let rta = JSON.parse(respuesta);                    
+                Swal.fire({
+                    icon: rta['tipo'],
+                    title: rta['titulo'],
+                    text: rta['msg'],
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    if(rta['tipo']=="success"){
+                        location.reload();
+                    }
+                });                
             }
+
+            
         });
     }
 
