@@ -3,7 +3,11 @@ require_once "public/plantilla.html";
 startblock('article');
 ?>
 
-
+<div class="row">
+  <div class="col-md-12">
+    <h1>Gestion de notas Administracion Ruta 3</h1>
+  </div>
+</div>
 
 <table class="table">
   <thead>
@@ -21,6 +25,11 @@ startblock('article');
       <th scope="col">Periodo</th>
       <th scope="col"><?php echo $curso5?></th>
       <th scope="col">Periodo</th>
+      <th scope="col"><?php echo $curso6?></th>
+      <th scope="col">Periodo</th>  
+      <th scope="col"><?php echo $curso7?></th>
+      <th scope="col">Periodo</th>                       
+      
       <th scope="col">Promedio</th>
       <th scope="col">Estado</th>
     </tr>
@@ -31,8 +40,13 @@ startblock('article');
     $cont = 0;
     foreach ($array_notas as $key) {
         $cont++;
-        $prom = ($key->getCurso1() + $key->getCurso2() + $key->getCurso3() + $key->getCurso4()+ $key->getCurso5()) /5;
-        if($key->getCurso1() != "" && $key->getCurso2() != "" && $key->getCurso3() != "" && $key->getCurso4() != "" && $key->getCurso5() != ""){
+        $prom = ($key->getCurso1() + $key->getCurso2() + $key->getCurso3() + $key->getCurso4()+ $key->getCurso5()  + $key->getCurso6() + $key->getCurso7()) /7;
+        if(
+          $key->getCurso1() != "" && $key->getCurso2() != "" && 
+          $key->getCurso3() != "" && $key->getCurso4() != "" && 
+          $key->getCurso5() != "" && $key->getCurso6() != "" &&
+          $key->getCurso7() != ""
+        ){
             $ins = "Terminada";
         }else{
             $ins = "en curso";
@@ -53,6 +67,10 @@ startblock('article');
       <td><?php echo $key->getPeriodo4()?></td>
       <td><?php echo $key->getCurso5()?></td>
       <td><?php echo $key->getPeriodo5()?></td>
+      <td><?php echo $key->getCurso6()?></td>
+      <td><?php echo $key->getPeriodo6()?></td> 
+      <td><?php echo $key->getCurso7()?></td>
+      <td><?php echo $key->getPeriodo7()?></td>       
       <td><?php echo $prom?></td>
       <td><?php echo $ins?></td>
     </tr>

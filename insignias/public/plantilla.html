@@ -28,23 +28,78 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="<?php echo BASE_URL?>index" class="sidebar-link">
-                        <i class="lni lni-user"></i>
-                        <span>Ruta 1</span>
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-java"></i>
+                        <span>Ing. Sistemas</span>
                     </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="<?php echo BASE_URL?>index/ruta2" class="sidebar-link">
-                        <i class="lni lni-user"></i>
-                        <span>Ruta 2</span>
-                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>index" class="sidebar-link">Ruta 1</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>index/ruta2" class="sidebar-link">Ruta 2</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>index/ruta3" class="sidebar-link">Ruta 3</a>
+                        </li>                        
+                    </ul>
                 </li>                
                 <li class="sidebar-item">
-                    <a href="<?php echo BASE_URL?>index/ruta3" class="sidebar-link">
-                        <i class="lni lni-user"></i>
-                        <span>Ruta 3</span>
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#admin" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-bar-chart"></i>
+                        <span>Adm Empresas</span>
                     </a>
-                </li>                                
+                    <ul id="admin" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>admin/ruta1" class="sidebar-link">Ruta 1</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>admin/ruta2" class="sidebar-link">Ruta 2</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>admin/ruta3" class="sidebar-link">Ruta 3</a>
+                        </li>                        
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#inds" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-bar-chart"></i>
+                        <span>Industrial</span>
+                    </a>
+                    <ul id="inds" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>industrial/ruta1" class="sidebar-link">Ruta 1</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>industrial/ruta2" class="sidebar-link">Ruta 2</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>industrial/ruta3" class="sidebar-link">Ruta 3</a>
+                        </li>                        
+                    </ul>
+                </li> 
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#psico" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-bar-chart"></i>
+                        <span>Psicologia</span>
+                    </a>
+                    <ul id="psico" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>psicologia/ruta1" class="sidebar-link">Ruta 1</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>psicologia/ruta2" class="sidebar-link">Ruta 2</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="<?php echo BASE_URL?>psicologia/ruta3" class="sidebar-link">Ruta 3</a>
+                        </li>                        
+                    </ul>
+                </li>                
+                                                                
             </ul>
             <div class="sidebar-footer">
                 <a href="<?php echo BASE_URL?>index/autor" class="sidebar-link">

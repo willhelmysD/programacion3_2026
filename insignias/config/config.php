@@ -1,3 +1,3 @@
 <?php
     define("BASE_URL", "http://localhost/programacion3/insignias/");
-    define("NAME_APP", "");
+    define("NAME_APP", "INSGNIAPP");

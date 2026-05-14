@@ -12,7 +12,9 @@ startblock('article');
       <th scope="col">Documento</th>
       <th scope="col">Estudiante</th>
       <th scope="col"><?php echo $curso1?></th>
+      <th scope="col">Periodo</th>
       <th scope="col"><?php echo $curso2?></th>
+      <th scope="col">Periodo</th>
       <th scope="col">Promedio</th>
       <th scope="col">estado</th>
     </tr>
@@ -36,7 +38,9 @@ startblock('article');
       <td><?php echo $key->getCc()?></td>
       <td><?php echo $key->getEstudiante()?></td>
       <td><?php echo $key->getCurso1()?></td>
+      <td><?php echo $key->getPeriodo1()?></td>
       <td><?php echo $key->getCurso2()?></td>
+      <td><?php echo $key->getPeriodo2()?></td>
       <td><?php echo $prom?></td>
       <td><?php echo $ins?></td>
     </tr>
